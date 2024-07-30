@@ -1,14 +1,18 @@
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Layout from "./components/shared/layout/Layout";
 import Dashboard from "./components/Dashboard";
-import SideBAr from "./components/SideBAr";
+import VatPage from "./components/vat/VatPage";
 
 function App() {
   return (
-    <>
-      <div className="flex h-[100vh]">
-        <SideBAr />
-        <Dashboard />
-      </div>
-    </>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Dashboard />} />
+          <Route path="/vat" element={<VatPage />} />
+        </Route>
+      </Routes>
+    </Router>
   );
 }
 

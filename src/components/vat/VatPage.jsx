@@ -1,15 +1,15 @@
 import { useState } from "react";
 import { FaSearch } from "react-icons/fa";
 import { Link } from "react-router-dom";
-import Table from "./Table";
+import VatTable from "./VatTable";
 
 const options = [
-  { label: "Due within 9 months", value: 1 },
+  { label: "Names", value: 1 },
   { label: "Due within 10 months", value: 2 },
   { label: "Due within 11 months", value: 3 },
 ];
 
-const Dashboard = () => {
+const VatPage = () => {
   const [value, setValue] = useState("");
 
   function handleSelect(event) {
@@ -27,7 +27,7 @@ const Dashboard = () => {
             Account
           </a>
           <a
-            href="/vat"
+            href="#"
             className="ms-4 font-medium leading-6 underline-animation hover:text-[#5D4CF7]"
           >
             VAT Returns
@@ -39,14 +39,41 @@ const Dashboard = () => {
         <div className="flex px-6 items-center gap-3">
           <div className="w-[1056px] h-[52px]">
             <div className="flex flex-col">
-              <h4 className="font-medium leading-6 text-base">Accounts</h4>
+              <h4 className="font-medium leading-6 text-base">
+                Manage VAT Returns
+              </h4>
               <span className="font-normal text-base leading-[19.71px] text-[#6A6A72] mt-2">
-                Manage and review accounts
+                Manage and view all information about client’s VAT Filing.
               </span>
             </div>
           </div>
           <div className="w-[124px] h-12 border border-solid border-[#DBD8F0] rounded-md bg-[#FBFAFF] px-[20px] py-3">
             <button>Expot CSV</button>
+          </div>
+        </div>
+
+        {/* Links area */}
+
+        <div className="flex border-b px-4 w-[1240px] mt-4">
+          <div className="px-4 py-3">
+            <Link
+              to="#"
+              className="font-medium leading-6 underline-animation hover:text-[#5D4CF7]"
+            >
+              January/April/July/October
+            </Link>
+            <Link
+              to="#"
+              className="ms-4 font-medium leading-6 underline-animation hover:text-[#5D4CF7]"
+            >
+              January/April/July/October
+            </Link>
+            <Link
+              to="#"
+              className="ms-4 font-medium leading-6 underline-animation hover:text-[#5D4CF7]"
+            >
+              March/June/September/December
+            </Link>
           </div>
         </div>
 
@@ -81,10 +108,10 @@ const Dashboard = () => {
           </div>
         </div>
 
-        <Table />
+        <VatTable />
       </div>
     </div>
   );
 };
 
-export default Dashboard;
+export default VatPage;
