@@ -20,7 +20,7 @@ const Table = () => {
                     <th className="px-6 py-3.5 text-left text-sm font-normal text-white">
                       Status
                     </th>
-                    <th className="px-4 py-3.5 text-left text-sm font-normal text-white">
+                    <th className="px-10 py-3.5 text-left text-sm font-normal text-white">
                       Action
                     </th>
                     <th className="relative px-4 py-3.5">

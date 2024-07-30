@@ -20,18 +20,18 @@ const Dashboard = () => {
     <div className="">
       <div className="border flex border-solid rounded-md px-4 mx-4 w-[1240px] mt-4">
         <div className="px-4 py-3">
-          <a
-            href="/"
+          <Link
+            to="/"
             className="font-medium leading-6 underline-animation hover:text-[#5D4CF7]"
           >
             Account
-          </a>
-          <a
-            href="/vat"
+          </Link>
+          <Link
+            to="/vat"
             className="ms-4 font-medium leading-6 underline-animation hover:text-[#5D4CF7]"
           >
             VAT Returns
-          </a>
+          </Link>
         </div>
       </div>
       {/* Second header  */}
